@@ -1,6 +1,6 @@
 ---
 date: 2022-12-12
-tags: imported,indienova,blog,开发技巧
+tags: 游戏设计,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/33126
 stream: old-posts
 ---

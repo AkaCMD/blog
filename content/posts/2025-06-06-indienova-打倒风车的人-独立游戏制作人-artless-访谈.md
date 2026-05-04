@@ -1,6 +1,6 @@
 ---
 date: 2025-06-06
-tags: imported,indienova,article
+tags: 游戏设计,迁移
 source: https://indienova.com/indie-game-development/interview-with-chinese-indie-game-developer-artless/
 stream: old-posts
 ---

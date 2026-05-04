@@ -1,6 +1,6 @@
 ---
 date: 2024-09-21
-tags: imported,indienova,article
+tags: 游戏设计,迁移
 source: https://indienova.com/indie-game-development/reflections-on-level-design-and-mda/
 stream: old-posts
 ---

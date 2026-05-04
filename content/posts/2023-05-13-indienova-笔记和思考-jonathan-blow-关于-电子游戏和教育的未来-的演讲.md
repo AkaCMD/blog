@@ -1,6 +1,6 @@
 ---
 date: 2023-05-13
-tags: imported,indienova,article
+tags: 游戏设计,笔记,迁移
 source: https://indienova.com/indie-game-review/notes-and-reflections-on-jonathan-blow-speech-video-games-and-the-future-of-education/
 stream: old-posts
 ---

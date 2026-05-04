@@ -2,7 +2,7 @@ name: Memex
 tagline: '当生活给我橙子'
 url: https://AkaCMD.github.io/blog
 https: null
-footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small> | <span class="theme-toggle secondary" title="dark mode">&#9789;</span></div>
+footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
 language: ''
 pagination: 10
 pages_title: Pages
@@ -16,7 +16,7 @@ series_title: Series
 series_content_title: Posts from '$series' series
 default_author: ''
 authors_title: Authors
-enable_search: true
+enable_search: false
 search_show_matches: false
 search_match_count: 0
 enable_related_content: false
@@ -39,7 +39,8 @@ menu:
   - old-posts.html
 - - 关于
   - about.html
-extra: null
+extra:
+  colormodetoggle: true
 authors: {}
 streams:
   old-posts:

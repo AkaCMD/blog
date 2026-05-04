@@ -1,6 +1,6 @@
 ---
 date: 2022-10-12
-tags: imported,github,fragment
+tags: 开发日志,迁移
 source: https://github.com/AkaCMD/akacmd.github.io
 stream: old-posts
 ---

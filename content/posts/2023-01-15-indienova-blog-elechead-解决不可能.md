@@ -1,6 +1,6 @@
 ---
 date: 2023-01-15
-tags: imported,indienova,blog,游戏评论
+tags: 游戏评论,游戏设计,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/33289
 stream: old-posts
 ---

@@ -1,6 +1,6 @@
 ---
 date: 2023-12-26
-tags: imported,indienova,article
+tags: 开发日志,迁移
 source: https://indienova.com/indie-game-development/a-review-of-bevy-jam-over-9-days/
 stream: old-posts
 ---
