@@ -18,13 +18,13 @@ stream: old-posts
 
 **Artless:**[Artless Games](https://store.steampowered.com/publisher/artlessgames) 创始于 2017 年，致力于制作使用较低美术资源的独立游戏。由于本人技术方面的特点，也就长期锁定在解谜游戏这个领域，并在其中尝试不同的方向。就这样，从 2017 年一直坚持到现在，专注的时间已经超过了大部分同类型开发者。
 
-![Artless Games logo](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668765889fGd-94dc23a8e7.png "Artless Games logo")
+![Artless Games logo](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668765889fGd-94dc23a8e7.png "Artless Games logo")
 
 #### 独立游戏的变化
 
 **三重鸭：** 从我大一刚了解独立游戏，接触到《时空幻境》（Braid）那些经典作品，到现在，我个人感觉整个独立游戏的氛围和大众对独立游戏的认知都变得很不一样。如今在网上经常能刷到很多人做的小游戏，标题上都会写“独立游戏”，一些比赛也会加上独立游戏的字样。所以我很好奇，**你现在对独立游戏的认识或定义是什么？和以前有没有什么变化？**
 
-![这部纪录片可能是很多人认识独立游戏的开始](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668765889d3h-729e8496dc.png "这部纪录片可能是很多人认识独立游戏的开始")
+![这部纪录片可能是很多人认识独立游戏的开始](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668765889d3h-729e8496dc.png "这部纪录片可能是很多人认识独立游戏的开始")
 
 **Artless：** 先说说我一开始的想法。2017 年的时候，Steam 刚开放了 100 美元注册的政策，迎来了第一次独立游戏的大爆发。那时候我发现，很多游戏光靠美术糊弄，其他部分感觉都没认真做。我就想反其道而行，只用心做好游戏的核心玩法，把美术部分简化，用这种方式讽刺这种现象。
 
@@ -62,7 +62,7 @@ stream: old-posts
 
 ##### 《YAPP》
 
-![YAPP 的商店页面](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766507yWN-26e1929c22.png "YAPP 的商店页面")
+![YAPP 的商店页面](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766507yWN-26e1929c22.png "YAPP 的商店页面")
 
 **Artless：** 我的第一个作品是款平台解谜游戏。其实一开始没打算做解谜游戏，只是为了学习游戏引擎，跟着教程做了个平台跳跃游戏，做着做着，觉得还挺满意，就继续往下做，慢慢成形了。
 
@@ -76,7 +76,7 @@ stream: old-posts
 
 ##### 《顿悟》
 
-![Understand 的商店页面](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-42226687665533eT-18af10dc9f.png "Understand 的商店页面")
+![Understand 的商店页面](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-42226687665533eT-18af10dc9f.png "Understand 的商店页面")
 
 **三重鸭:在第一款游戏《YAPP》之后，有没有用其他方法寻找灵感？**
 
@@ -108,7 +108,7 @@ stream: old-posts
 
 ##### 《14 种扫雷变体》
 
-![《14MV》 的商店页面](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766572n1A-1b30af2fdf.png "《14MV》 的商店页面")
+![《14MV》 的商店页面](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766572n1A-1b30af2fdf.png "《14MV》 的商店页面")
 
 **Artless：** 《14 种扫雷变体》参考过来自 CTC 频道的直播。Cracking The Cryptic，一个专门玩数独的 Youtube 频道，他们就喜欢玩各种各样的变体数独。
 
@@ -120,7 +120,7 @@ stream: old-posts
 
 ##### 《A=B》
 
-![《A=B》 的商店页面](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-42226687665927mX-0ff5b56d46.png "《A=B》 的商店页面")
+![《A=B》 的商店页面](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-42226687665927mX-0ff5b56d46.png "《A=B》 的商店页面")
 
 **三重鸭：** 我记得是做课程的大作业？
 
@@ -152,7 +152,7 @@ stream: old-posts
 
 **三重鸭：** 对，所以就干脆另起炉灶，成立新工作室。他后来又推出了桌游，还有什么算术小游戏。
 
-![Zachtronics 部分成员另起炉灶，成立新工作室 Coincidence](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766610KcQ-722a1938f4.png "Zachtronics 部分成员另起炉灶，成立新工作室 Coincidence")
+![Zachtronics 部分成员另起炉灶，成立新工作室 Coincidence](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766610KcQ-722a1938f4.png "Zachtronics 部分成员另起炉灶，成立新工作室 Coincidence")
 
 **Artless：** 好像挺普遍的。
 
@@ -196,7 +196,7 @@ stream: old-posts
 
 **三重鸭：** 主业最好不是游戏/互联网行业（笑）。
 
-![Matrix 67 的一些游戏作品](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766627VEa-06d7913f40.png "Matrix 67 的一些游戏作品")
+![Matrix 67 的一些游戏作品](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766627VEa-06d7913f40.png "Matrix 67 的一些游戏作品")
 
 #### 执行与迭代
 
@@ -212,7 +212,7 @@ stream: old-posts
 
 **Artless：** 差不多。
 
-![相对稳定的产出速度](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766643GP9-6347c1c375.png "相对稳定的产出速度")
+![相对稳定的产出速度](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766643GP9-6347c1c375.png "相对稳定的产出速度")
 
 **三重鸭：** 那其实还蛮快的，Zachtronics 的开发周期也是一年左右。
 
@@ -272,7 +272,7 @@ stream: old-posts
 
 **Artless：** 那是另一种情况。我估计我是不会有可能的，毕竟我的表现过于反市场化，不讨发行喜欢。主要要做市场化，也不知道市场什么样，还不如反一反，这样自己心里还高兴点。
 
-![Artless Games 在 B 站的频道也出了一两期视频，分享他对宣发的看法](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766662z2F-9df41682d9.png "Artless Games 在 B 站的频道也出了一两期视频，分享他对宣发的看法")
+![Artless Games 在 B 站的频道也出了一两期视频，分享他对宣发的看法](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766662z2F-9df41682d9.png "Artless Games 在 B 站的频道也出了一两期视频，分享他对宣发的看法")
 
 **三重鸭：** 美术堆料的游戏会比较吸睛，不过有时候，大家一眼看到美术非常简陋的作品，其实也会引起关注，有反差嘛。
 
@@ -292,7 +292,7 @@ stream: old-posts
 
 **Artless：** 对。但是 Love2d 非常合适，因为它只能干这点事，很多方面符合我的需求。许多引擎都会把折线包装成更加复杂的结构，就比较麻烦，比如说 Unity 要拆成三角形。
 
-![LÖVE（Love2d）的官网介绍，《小丑牌》也是拿这个做的](/media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766678Rup-72213ed1eb.png "LÖVE（Love2d）的官网介绍，《小丑牌》也是拿这个做的")
+![LÖVE（Love2d）的官网介绍，《小丑牌》也是拿这个做的](media/old-posts/indienova-打倒风车的人-独立游戏制作人-artless-访谈/u-4222668766678Rup-72213ed1eb.png "LÖVE（Love2d）的官网介绍，《小丑牌》也是拿这个做的")
 
 **三重鸭: 为什么新作《入空人》又换回了 Unity 引擎？**
 
