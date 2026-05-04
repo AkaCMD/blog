@@ -18,9 +18,9 @@ stream: old-posts
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917492SoA.png)
+![勇气与冒险](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917492SoA-d93078d946.png)
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917498B11.png)
+![无垠之心](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917498B11-68ecea01f6.png)
 
 **无垠之心**
 
@@ -38,7 +38,7 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917511Oh7.jpg)
+![TUNIC](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917511Oh7-99edb6e132.jpg)
 
 **TUNIC**
 
@@ -54,7 +54,7 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917520I2S.png)
+![A Short Hike](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917520I2S-d85bbc7d3a.png)
 
 **A Short Hike**
 
@@ -68,9 +68,9 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917529Kmt.png)
+![怪兽远征](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917529Kmt-b4acaa42dc.png)
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-42226669175345La.png)
+![怪兽远征](/media/old-posts/indienova-blog-夏日游戏推荐/u-42226669175345La-abc24d6f84.png)
 
 **怪兽远征**
 
@@ -88,9 +88,9 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917546Acu.png)
+![夏夜奇遇](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917546Acu-b10daac37c.png)
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-42226669175512Xf.png)
+![SEASON-寄梦远方](/media/old-posts/indienova-blog-夏日游戏推荐/u-42226669175512Xf-53a0a580f8.png)
 
 **SEASON-寄梦远方**
 
@@ -110,9 +110,9 @@ p.s. 如果你追求一般意义上的“好玩”，这是一款稍显平淡的
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917569UB3.png)
+![肯塔基零号公路](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917569UB3-104682a177.png)
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917576MAX.png)
+![肯塔基零号公路](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917576MAX-88ab89b018.png)
 
 **肯塔基零号公路**
 
@@ -130,7 +130,7 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917586DnY.png)
+![星际拓荒](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917586DnY-7ac20e0d86.png)
 
 **星际拓荒**
 
@@ -150,7 +150,7 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-4222666917595rlP.png)
+![赛博朋克酒保行动](/media/old-posts/indienova-blog-夏日游戏推荐/u-4222666917595rlP-6f393fcc6f.png)
 
 **赛博朋克酒保行动**
 
@@ -166,7 +166,7 @@ ____________________________________________________________________
 
 ____________________________________________________________________
 
-![Image title](https://hive.indienova.com/farm/blog/2023/06/u-42226669176020bL.png)
+![A Good Snowman Is Hard To Build](/media/old-posts/indienova-blog-夏日游戏推荐/u-42226669176020bL-23cc5c2300.png)
 
 **A Good Snowman Is Hard To Build**
 

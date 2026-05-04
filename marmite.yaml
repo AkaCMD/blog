@@ -1,5 +1,5 @@
 name: Memex
-tagline: '我爱玩原神'
+tagline: '当生活给我橙子'
 url: https://AkaCMD.github.io/blog
 https: null
 footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small> | <span class="theme-toggle secondary" title="dark mode">&#9789;</span></div>
@@ -31,12 +31,12 @@ banner_image: ''
 logo_image: ''
 default_date_format: '%b %e, %Y'
 menu:
-- - 旧文存档
-  - old-posts.html
 - - 标签
   - tags.html
 - - 时间线
   - archive.html
+- - 旧文存档
+  - old-posts.html
 - - 关于
   - about.html
 extra: null

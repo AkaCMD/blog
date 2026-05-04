@@ -14,9 +14,9 @@ stream: old-posts
 
 简单介绍下 MDA 框架（机制（Mechanics），动态（Dynamics），美感（Aesthetics）的缩写）。图片引用自落日间的相关译介：[《MDA 框架：一种游戏设计和游戏研究的形式化方法》](https://indienova.com/indie-game-development/sunset-sway-mda-a-formal-approach-to-gamedesign-and-game-research/)。
 
-![](https://hive.indienova.com/farm/blog/2024/08/u-4222665111227pTr.png)
+![](/media/old-posts/indienova-关卡设计与-mda-随想/u-4222665111227pTr-44364a7a38.png)
 
-![](https://hive.indienova.com/farm/blog/2024/08/u-4222665112697KWF.png)
+![](/media/old-posts/indienova-关卡设计与-mda-随想/u-4222665112697KWF-2ddd5df5da.png)
 
 **关卡设计在设计什么**
 
@@ -40,9 +40,9 @@ stream: old-posts
 
 **举例：**
 
-![PPT](https://hive.indienova.com/farm/blog/2024/08/u-4222665111392uz6.png)
+![展示一下开发辅助用的关卡编辑 PPT](/media/old-posts/indienova-关卡设计与-mda-随想/u-4222665111392uz6-35f22174e6.png "展示一下开发辅助用的关卡编辑 PPT")
 
-展示一下开发辅助用的关卡编辑 PPT实际上，我自己做[《小石头人踏上旅程》那将近 80 个关卡](https://www.bilibili.com/video/BV1mp4y1w7n2)的时候，采用的方法之一就是把所有游戏机制及其交叉列出来，尝试能否围绕其做关卡，并以机制的类型和引入来划分关卡区域。甚至在尝试制作关卡的过程中也会想到可以加入相关的新机制，反向促进系统的设计（这点是比较少见其他人提到的）。
+实际上，我自己做[《小石头人踏上旅程》那将近 80 个关卡](https://www.bilibili.com/video/BV1mp4y1w7n2)的时候，采用的方法之一就是把所有游戏机制及其交叉列出来，尝试能否围绕其做关卡，并以机制的类型和引入来划分关卡区域。甚至在尝试制作关卡的过程中也会想到可以加入相关的新机制，反向促进系统的设计（这点是比较少见其他人提到的）。
 
 仔细一想，这不就是 MDA 理论中从 M 出发一直走到 A 的路径吗？M→D→A。
 
@@ -69,7 +69,7 @@ stream: old-posts
 
 **举例：**
 
-![](https://hive.indienova.com/farm/blog/2024/08/u-4222665111123wyI.png)
+![](/media/old-posts/indienova-关卡设计与-mda-随想/u-4222665111123wyI-9702f1edf5.png)
 
 在[《小石头人踏上旅程》](https://store.steampowered.com/app/2434860/Stonemans_Adventure)里，有一个我没想到玩家会卡的初期关卡“分而治之”，在观看了一些游玩过程后，我做出了如下分析：
 

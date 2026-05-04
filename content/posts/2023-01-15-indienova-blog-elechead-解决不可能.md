@@ -10,7 +10,7 @@ stream: old-posts
 
 在这款游戏的 steam 简介上只有三个 emoji: 闪电＋机器人的头＋拼图，虽然抽象但是确实是游戏的概括——站哪哪通电，主角是可以把头丢出去的机器人、这是一个解谜游戏（其实是平台跳跃解谜）。 相信在这时你就能感受到这个游戏的独特气质了。对了，这个游戏其实除了标题和 credit 外都没有字出现（甚至成就介绍是空白的），能用图形表示的就用图形，连本地化都省了，直接支持全语言。
 
-![拿“首”好戏](https://hive.indienova.com/farm/blog/2023/01/u-4222663793809Ip8.png)
+![拿“首”好戏](/media/old-posts/indienova-blog-elechead-解决不可能/u-4222663793809Ip8-a785a56d88.png)
 
 *ElecHead*的游戏机制玩起来超级直观好懂，列举一下基本的一些：
 
@@ -19,7 +19,7 @@ stream: old-posts
 - 可以把头丢出去，身体不导电
 - “人”“头”分离十秒钟自动爆炸
 
-![从 steam 页面截的 gif](https://hive.indienova.com/farm/blog/2023/01/u-4222663793946rUO.gif)
+![从 steam 页面截的 gif](/media/old-posts/indienova-blog-elechead-解决不可能/u-4222663793946rUO-0ddb4213ea.gif)
 
 除此之外，还有各式各样的平台机关相配合，我就不多介绍啦，可以直接去看看它的预告片或者上手试试。本作的关卡设计相当优秀，把机制组合产生的各种可能性都很好挖掘出来了，难度也适中。
 
@@ -42,7 +42,7 @@ GMTK（游戏制作工具箱）这位油管主在“开发之旅”系列里也�
 
 其实解决方法也很简单。不能兼得？那我选一个侧重不就好了。*ElecHead* 就是这么做的，游戏的篇幅基本都放在解谜上，基本没有关卡会让人因为平台跳跃的问题而卡住，基本也没有关卡能利用平台跳跃技巧偷鸡。说起来简单，但其实这个度的把握至关重要，*ElecHead*做到了。除此之外，开发者也没有忽视跳跃手感之类的东西，土狼时间、生动的动画该少的都没少，整体操作手感还是顺的。
 
-![需要一点 timing 技巧，但不多](https://hive.indienova.com/farm/blog/2023/01/u-4222663794010F9L.png)
+![需要一点 timing 技巧，但不多](/media/old-posts/indienova-blog-elechead-解决不可能/u-4222663794010F9L-f2a16f7390.png)
 
 顺便推荐一个 GameJam 的平台跳跃解谜作为参考（[https://pynl.itch.io/threadbound](https://pynl.itch.io/threadbound)），游戏概念很惊艳，但是由于机制本身使得平台跳跃和解谜强绑定了，所以这个问题会更难解决。
 
