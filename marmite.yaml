@@ -46,7 +46,7 @@ extra:
 authors: {}
 streams:
   old-posts:
-    display_name: 旧文存档
+    display_name: 旧存档
 series: {}
 toc: false
 json_feed: false
