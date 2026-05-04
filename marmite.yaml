@@ -37,6 +37,8 @@ menu:
   - archive.html
 - - 旧文存档
   - old-posts.html
+- - RSS
+  - index.rss
 - - 关于
   - about.html
 extra:
