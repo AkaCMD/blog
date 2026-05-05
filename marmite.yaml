@@ -1,9 +1,9 @@
 name: Memex
-tagline: '当生活给我橙子'
+tagline: "当生活给我橙子"
 url: https://AkaCMD.github.io/blog
 https: null
 footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
-language: ''
+language: ""
 pagination: 10
 pages_title: Pages
 tags_title: Tags
@@ -14,35 +14,36 @@ streams_title: Streams
 streams_content_title: Posts from '$stream'
 series_title: Series
 series_content_title: Posts from '$series' series
-default_author: ''
+default_author: ""
 authors_title: Authors
 enable_search: false
 search_show_matches: false
 search_match_count: 0
 enable_related_content: false
-search_title: ''
+search_title: ""
 content_path: content
-site_path: ''
+site_path: ""
 templates_path: templates
 static_path: static
 media_path: media
-card_image: ''
-banner_image: ''
-logo_image: ''
-default_date_format: '%b %e, %Y'
+card_image: ""
+banner_image: ""
+logo_image: ""
+default_date_format: "%b %e, %Y"
 menu:
-- - 标签
-  - tags.html
-- - 时间线
-  - archive.html
-- - 旧存档
-  - old-posts.html
-- - RSS
-  - index.rss
-- - 关于
-  - about.html
+  - - 标签
+    - tags.html
+  - - 时间线
+    - archive.html
+  - - 旧存档
+    - old-posts.html
+  - - RSS
+    - index.rss
+  - - 关于
+    - about.html
 extra:
   colormodetoggle: true
+  fediverse_verification: https://mastodon.gamedev.place/@cmd_official
 authors: {}
 streams:
   old-posts:
