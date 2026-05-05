@@ -8,6 +8,7 @@
 也可以在 [itch.io](https://akacmd.itch.io/) 上试玩更多作品和原型。
 
 
+邮箱：[akacmd333@gmail.com](mailto:akacmd333@gmail.com)
 
 - [itch.io](https://akacmd.itch.io/)
 - [Steam](https://store.steampowered.com/developer/cmd/)
@@ -16,4 +17,4 @@
 - [Mastodon](https://mastodon.gamedev.place/@cmd_official)
 - [Discord](https://discord.gg/e78beJkK4p)
 
-邮箱：[akacmd333@gmail.com](mailto:akacmd333@gmail.com)
+**Stay weird and unmarketable.**
