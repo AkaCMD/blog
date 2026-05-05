@@ -24,6 +24,19 @@ One-time build only:
 marmite . site
 ```
 
+Run link checker, if installed:
+
+```sh
+# Basic link checking
+lychee http://localhost:8000
+
+# More verbose output with HTML file checking
+lychee --verbose http://localhost:8000 --extensions html
+
+# Check the built files directly (offline mode)
+lychee --verbose ./site --extensions html
+```
+
 ## Deploy
 
 Deployment uses GitHub Pages via `.github/workflows/main.yaml`.
