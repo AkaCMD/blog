@@ -56,7 +56,7 @@ toc: false
 json_feed: false
 show_next_prev_links: true
 publish_md: false
-source_repository: null
+source_repository: https://github.com/AkaCMD/blog
 image_provider: null
 markdown_parser: null
 code_highlight: null
