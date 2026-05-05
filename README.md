@@ -37,6 +37,13 @@ Build only:
 marmite . site
 ```
 
+Image resizing is enabled: regular images max 800px, banner images max 1200px
+For faster local preview, skip image resizing:
+
+```sh
+marmite . site --skip-image-resize true
+```
+
 Check links:
 
 ```sh

@@ -44,6 +44,9 @@ menu:
 extra:
   colormodetoggle: true
   fediverse_verification: https://mastodon.gamedev.place/@cmd_official
+  max_image_width: 800
+  banner_image_width: 1200
+  resize_filter: "quality"
 authors: {}
 streams:
   old-posts:
