@@ -1,3 +1,4 @@
 site/
 target/
 .DS_Store
+content/.obsidian/
