@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""检查 Marmite 输出中的本地链接、媒体和 favicon，无需第三方依赖。"""
+"""检查 Marmite 输出中的本地链接、源码链接、媒体和 favicon，无需第三方依赖。"""
 import argparse
 import json
 from html.parser import HTMLParser
@@ -23,7 +23,8 @@ def main():
     parser.add_argument("site", nargs="?", default="site", type=Path)
     args = parser.parse_args()
     root = args.site.resolve()
-    config = json.loads((root / "marmite.json").read_text())["config"]
+    manifest = json.loads((root / "marmite.json").read_text())
+    config = manifest["config"]
     base = urlsplit(config["url"])
     prefix = base.path.rstrip("/")
     errors = set()
@@ -53,11 +54,27 @@ def main():
         target = root / relative
         if not target.is_file() or target.stat().st_size == 0:
             errors.add(f"图标缺失或为空: {relative}")
+    repository = config.get("source_repository")
+    if repository:
+        project = Path(__file__).resolve().parent.parent
+        for item in manifest["posts"] + manifest["pages"]:
+            source = Path(item["source_path"])
+            page = root / (item["slug"] + ".html")
+            if not (project / source).is_file():
+                errors.add(f"源码文件不存在: {source}")
+            if not page.is_file():
+                errors.add(f"内容页面不存在: {page.name}")
+                continue
+            links = Links()
+            links.feed(page.read_text())
+            expected = repository.rstrip("/") + "/" + source.as_posix()
+            if expected not in {unquote(url) for url in links.urls}:
+                errors.add(f"{page.name}: 源码链接缺失或路径错误，应为 {expected}")
     if errors:
         for error in sorted(errors):
             print(error)
         raise SystemExit(f"检查失败：{len(errors)} 个问题")
-    print(f"检查通过：{len(pages)} 个 HTML 页面的本地链接、媒体和 favicon。")
+    print(f"检查通过：{len(pages)} 个 HTML 页面的本地链接、源码链接、媒体和 favicon。")
 
 
 if __name__ == "__main__":

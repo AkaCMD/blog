@@ -42,7 +42,8 @@ extra:
 # 输出与源文件
 json_feed: false
 publish_md: false
-source_repository: https://github.com/AkaCMD/blog/blob/main/content
+# 模板将仓库根地址与完整的 content/... 路径拼接，保留子目录。
+source_repository: https://github.com/AkaCMD/blog/blob/main
 build_sitemap: true
 publish_urls_json: true
 
