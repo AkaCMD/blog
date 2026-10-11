@@ -12,6 +12,9 @@ tags:
 - LÖVE2d
 - PuzzleScript
 
+**Game Engine Plugins**
+- Scythe Editor (UE)
+
 **Modeling**
 - Magicavoxel
 
@@ -29,3 +32,10 @@ tags:
 
 **Typesetting**
 - typst
+
+**Text Editing**
+- Sublime Text
+
+
+推荐阅读：
+https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/
