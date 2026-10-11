@@ -2,7 +2,6 @@
 date: 2023-09-17
 tags: 开发日志,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/34357
-stream: old-posts
 ---
 # 《小石头人踏上旅程》正式上架Steam!
 

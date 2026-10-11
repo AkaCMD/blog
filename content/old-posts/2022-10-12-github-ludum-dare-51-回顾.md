@@ -2,7 +2,6 @@
 date: 2022-10-12
 tags: 开发日志,迁移
 source: https://github.com/AkaCMD/akacmd.github.io
-stream: old-posts
 ---
 # Ludum Dare 51 回顾
 

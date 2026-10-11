@@ -2,7 +2,6 @@
 date: 2022-12-12
 tags: 游戏设计,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/33126
-stream: old-posts
 ---
 # 从核心机制出发的游戏设计
 

@@ -2,7 +2,6 @@
 date: 2023-06-16
 tags: 游戏评论,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/33947
-stream: old-posts
 ---
 # 夏日游戏推荐
 

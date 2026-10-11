@@ -2,7 +2,6 @@
 date: 2022-10-28
 tags: 笔记,迁移
 source: https://github.com/AkaCMD/akacmd.github.io
-stream: old-posts
 ---
 # Creative_A Short and Cheerful Guide 笔记
 

@@ -2,7 +2,6 @@
 date: 2023-05-13
 tags: 游戏设计,笔记,迁移
 source: https://indienova.com/indie-game-review/notes-and-reflections-on-jonathan-blow-speech-video-games-and-the-future-of-education/
-stream: old-posts
 ---
 # 笔记和思考：Jonathan Blow 关于《电子游戏和教育的未来》的演讲
 

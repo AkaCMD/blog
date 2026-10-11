@@ -2,7 +2,6 @@
 date: 2023-01-30
 tags: 游戏设计,迁移
 source: https://indienova.com/u/mGvPbI1om11091/blogread/33337
-stream: old-posts
 ---
 # 探索解谜游戏中的叙事元素
 

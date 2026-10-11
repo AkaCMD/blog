@@ -2,7 +2,6 @@
 date: 2025-06-06
 tags: 游戏设计,迁移
 source: https://indienova.com/indie-game-development/interview-with-chinese-indie-game-developer-artless/
-stream: old-posts
 ---
 # 打倒风车的人：独立游戏制作人 Artless 访谈
 

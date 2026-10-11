@@ -2,7 +2,6 @@
 date: 2024-09-21
 tags: 游戏设计,迁移
 source: https://indienova.com/indie-game-development/reflections-on-level-design-and-mda/
-stream: old-posts
 ---
 # 关卡设计与 MDA 随想
 
