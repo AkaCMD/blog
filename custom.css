@@ -3,6 +3,10 @@
     font-size: 100%;
 }
 
+.hero > article {
+    background-color: var(--pico-background-color);
+}
+
 .content-tags a:where(a:not([role=button])),
 [role=link] {
     --pico-color: revert;
