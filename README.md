@@ -13,6 +13,8 @@ A static blog built with Marmite 0.4.2: [Visit the blog](https://AkaCMD.github.i
 - `custom.css` and `favicon.ico`: site assets
 - `site/`: generated output, ignored by Git
 
+Local agent skills in `.agents/skills/` are also ignored.
+
 ## Preview
 
 ```sh
