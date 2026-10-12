@@ -26,7 +26,6 @@ menu:
   - [时间线, archive.html]
   - [旧存档, old-posts.html]
   - [友链, links.html]
-  - [RSS, "#rss"]
   - [关于, about.html]
 streams:
   old-posts:

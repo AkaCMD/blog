@@ -15,14 +15,14 @@ class Links(HTMLParser):
         self.urls = []
         self.shortcode_error = False
         self.feeds = []
-        self.rss_menu = []
+        self.rss_buttons = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
         if tag == "link" and attributes.get("type") in {"application/rss+xml", "application/atom+xml", "application/feed+json"}:
             self.feeds.append(attributes.get("href"))
-        if tag == "a" and "menu-item" in attributes.get("class", "").split() and attributes.get("href", "").endswith("#rss"):
-            self.rss_menu.append(attributes)
+        if tag == "button" and "rss-copy-button" in attributes.get("class", "").split():
+            self.rss_buttons.append(attributes)
         if "shortcode-error" in (dict(attrs).get("class") or "").split():
             self.shortcode_error = True
         for key, value in attrs:
@@ -49,12 +49,13 @@ def main():
         links.feed(page.read_text())
         if links.feeds != [feed_url]:
             errors.add(f"{page.name}: 应只声明全站 RSS {feed_url}")
-        if len(links.rss_menu) != 1 or any(
-            urlsplit(urljoin(config["url"].rstrip("/") + "/" + page.name, link.get("href", ""))).fragment != "rss"
-            or link.get("target", "_self") != "_self" or link.get("onclick")
-            for link in links.rss_menu
+        if len(links.rss_buttons) != 1 or any(
+            link.get("type") != "button"
+            or link.get("title") != "Copy RSS feed URL"
+            or link.get("aria-label") != "Copy RSS feed URL"
+            for link in links.rss_buttons
         ):
-            errors.add(f"{page.name}: RSS 导航应使用复制订阅链接的页面内标记")
+            errors.add(f"{page.name}: RSS 应为带英文提示和无障碍名称的复制按钮")
         if links.shortcode_error:
             errors.add(f"{page.name}: Shortcode 渲染失败")
         for raw in links.urls:
@@ -82,7 +83,7 @@ def main():
         marker not in custom_script.read_text()
         for marker in ("event.preventDefault()", "rss-copy-status")
     ):
-        errors.add("RSS 导航缺少阻止直接打开订阅文件的点击处理")
+        errors.add("RSS 按钮缺少复制订阅链接的点击处理")
     repository = config.get("source_repository")
     if repository:
         project = Path(__file__).resolve().parent.parent
@@ -122,7 +123,7 @@ def main():
             print(error)
         raise SystemExit(f"检查失败：{len(errors)} 个问题")
     print(f"检查通过：{len(pages)} 个 HTML 页面的渲染、本地链接、源码链接、媒体和 favicon。")
-    print(f"RSS 检查通过：唯一订阅地址、当前标签页导航、全文和 {len(items)} 篇文章。")
+    print(f"RSS 检查通过：唯一订阅地址、复制按钮、全文和 {len(items)} 篇文章。")
 
 
 if __name__ == "__main__":

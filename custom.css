@@ -179,3 +179,38 @@ header > a:visited,
     opacity: 1;
     transform: translate(-50%, 0);
 }
+
+/* Keep subscription and theme controls together, including in the mobile menu. */
+.header-menu .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header-actions .header-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--pico-primary);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.header-actions .header-icon-button:hover,
+.header-actions .header-icon-button.copied {
+    background: var(--pico-card-background-color);
+}
+
+.header-actions .header-icon-button:focus-visible {
+    outline: 2px solid var(--pico-primary);
+    outline-offset: 2px;
+}
