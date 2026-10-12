@@ -78,7 +78,10 @@ def main():
         if not target.is_file() or target.stat().st_size == 0:
             errors.add(f"图标缺失或为空: {relative}")
     custom_script = root / "static/custom.js"
-    if not custom_script.is_file() or "event.preventDefault()" not in custom_script.read_text():
+    if not custom_script.is_file() or any(
+        marker not in custom_script.read_text()
+        for marker in ("event.preventDefault()", "rss-copy-status")
+    ):
         errors.add("RSS 导航缺少阻止直接打开订阅文件的点击处理")
     repository = config.get("source_repository")
     if repository:

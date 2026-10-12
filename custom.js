@@ -2,7 +2,13 @@ const rssLink = document.querySelector('.menu-item[href$="#rss"]');
 const rssFeed = document.querySelector('link[rel="alternate"][type="application/rss+xml"]');
 
 if (rssLink && rssFeed) {
-    const originalLabel = rssLink.textContent;
+    const copyStatus = document.createElement('span');
+    let hideStatusTimeout;
+
+    copyStatus.className = 'rss-copy-status';
+    copyStatus.setAttribute('role', 'status');
+    copyStatus.setAttribute('aria-live', 'polite');
+    document.body.appendChild(copyStatus);
 
     rssLink.title = '复制订阅链接';
     rssLink.addEventListener('click', async (event) => {
@@ -22,9 +28,11 @@ if (rssLink && rssFeed) {
             input.remove();
         }
 
-        rssLink.textContent = '已复制';
-        window.setTimeout(() => {
-            rssLink.textContent = originalLabel;
+        copyStatus.textContent = 'Copied!';
+        copyStatus.classList.add('visible');
+        window.clearTimeout(hideStatusTimeout);
+        hideStatusTimeout = window.setTimeout(() => {
+            copyStatus.classList.remove('visible');
         }, 1600);
     });
 }
