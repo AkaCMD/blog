@@ -48,7 +48,7 @@ extra:
 
 Merge these entries into the existing `extra` configuration and use full `https://` or `http://` URLs. Keep `friend_links: []` when the list is empty.
 
-Edit the page introduction and link exchange details in `content/pages/links.md`. The `<!-- .friend_links -->` shortcode renders cards that support light and dark themes and mobile screens. Rebuild the site after making changes.
+The friend links page is defined in `content/pages/links.md`. The `<!-- .friend_links -->` shortcode renders cards that support light and dark themes and mobile screens. Rebuild the site after making changes.
 
 ## Build and deploy
 

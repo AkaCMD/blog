@@ -35,7 +35,21 @@ search_title: ""
 # 外观与图片处理
 extra:
   # 友链按列表顺序展示；填写 name、url 和可选的 description。
-  friend_links: []
+  friend_links:
+    - name: 真强悍
+      url: https://zqh46656.github.io/blog/
+    - name: "dyron503's"
+      url: https://blog.dyron503.com/
+    - name: rasp505
+      url: https://blog.rasp505.top/
+    - name: koiro
+      url: https://blog.koiro.xyz/
+    - name: iz
+      url: https://www.dangoiz.com/
+    - name: 北依树洞
+      url: https://hanahoshikawa092.netlify.app/zh
+    - name: "Feishiko's Site"
+      url: https://feishiko.top
   colormodetoggle: true
   fediverse_verification: https://mastodon.gamedev.place/@cmd_official
   max_image_width: 800
