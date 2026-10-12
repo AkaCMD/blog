@@ -1,0 +1,18 @@
+{% macro friend_links() %}
+{% if site.extra.friend_links %}
+<ul class="friend-links" aria-label="朋友们的站点">
+  {% for friend in site.extra.friend_links %}
+  <li>
+    <a class="friend-link" href="{{ friend.url | escape }}" rel="friend">
+      <span class="friend-link-name">{{ friend.name | escape }}</span>
+      {% if friend.description %}
+      <span class="friend-link-description">{{ friend.description | escape }}</span>
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="friend-links-empty">这里还没有友链，欢迎来交换！</p>
+{% endif %}
+{% endmacro friend_links %}

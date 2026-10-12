@@ -19,6 +19,7 @@ menu:
   - [标签, tags.html]
   - [时间线, archive.html]
   - [旧存档, old-posts.html]
+  - [友链, links.html]
   - [RSS, index.rss]
   - [关于, about.html]
 streams:
@@ -33,6 +34,8 @@ search_title: ""
 
 # 外观与图片处理
 extra:
+  # 友链按列表顺序展示；填写 name、url 和可选的 description。
+  friend_links: []
   colormodetoggle: true
   fediverse_verification: https://mastodon.gamedev.place/@cmd_official
   max_image_width: 800

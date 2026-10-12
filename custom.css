@@ -82,3 +82,43 @@ header > a:visited,
 [data-theme=dark] pre:has(> code.language-mermaid) {
     background-color: var(--pico-code-color);
 }
+
+.content-html .friend-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.content-html .friend-links li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.friend-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--pico-card-background-color);
+    border: 1px solid var(--pico-table-border-color);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.friend-link:hover,
+.friend-link:focus-visible {
+    border-color: var(--pico-primary);
+}
+
+.friend-link-name {
+    font-weight: bold;
+}
+
+.friend-link-description,
+.friend-links-empty {
+    color: var(--pico-muted-color);
+}
