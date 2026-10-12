@@ -19,36 +19,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Resolve latest stable Marmite
+      - name: Read locked Marmite version
         id: marmite-version
         run: |
-          version="$(python3 scripts/latest_marmite.py)"
+          version="$(bash scripts/marmite.sh --locked-version)"
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Cache Marmite binary
         uses: actions/cache@v4
         with:
-          path: ~/.local/share/marmite/bin/marmite
-          key: marmite-${{ runner.os }}-${{ runner.arch }}-ubuntu24-${{ steps.marmite-version.outputs.version }}-locked-v1
+          path: ~/.local/share/memex-marmite/${{ steps.marmite-version.outputs.version }}/bin/marmite
+          key: marmite-${{ runner.os }}-${{ runner.arch }}-ubuntu24-${{ steps.marmite-version.outputs.version }}-locked-v2
 
       - name: Install and verify Marmite
-        shell: bash
-        env:
-          MARMITE_VERSION: ${{ steps.marmite-version.outputs.version }}
-        run: |
-          marmite_root="$HOME/.local/share/marmite"
-          if [[ ! -x "$marmite_root/bin/marmite" ]] || [[ "$("$marmite_root/bin/marmite" --version)" != "marmite $MARMITE_VERSION" ]]; then
-            rustup update stable --no-self-update
-            cargo +stable install marmite --version "$MARMITE_VERSION" --locked --force --root "$marmite_root"
-          fi
-          "$marmite_root/bin/marmite" --version
-          echo "$marmite_root/bin" >> "$GITHUB_PATH"
+        run: bash scripts/marmite.sh --ensure
 
-      - name: Build site
-        run: marmite . site
-
-      - name: Check rendered pages, links and assets
-        run: python3 scripts/check_site.py site
+      - name: Build and validate site
+        run: bash scripts/build_site.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

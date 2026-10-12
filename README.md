@@ -19,9 +19,7 @@ Local agent skills in `.agents/skills/` are also ignored.
 ## Preview
 
 ```sh
-rustup update stable --no-self-update
-cargo +stable install marmite --version "$(python3 scripts/latest_marmite.py)" --locked --force
-marmite . site --serve --watch --bind 127.0.0.1:8000 --url http://127.0.0.1:8000
+bash scripts/marmite.sh . site --serve --watch --bind 127.0.0.1:8000 --url http://127.0.0.1:8000
 ```
 
 Open [localhost](http://127.0.0.1:8000/).
@@ -29,8 +27,8 @@ Open [localhost](http://127.0.0.1:8000/).
 ## Write
 
 ```sh
-marmite . --new "Post title" -t "随笔"
-marmite . --new "Page title" -p
+bash scripts/marmite.sh . --new "Post title" -t "随笔"
+bash scripts/marmite.sh . --new "Page title" -p
 ```
 
 Keep existing filenames and streams to preserve URLs. Use site-relative image paths such as `media/example.png`.
@@ -57,10 +55,22 @@ The friend links page is defined in `content/pages/links.md`. The `<!-- .friend_
 ## Build and deploy
 
 ```sh
-marmite . site
-python3 scripts/check_site.py site
+bash scripts/build_site.sh
 ```
 
 Push changes, then manually run **GH Pages Deploy** in GitHub Actions. Deployment remains manual; pushing a commit does not publish the site.
 
-Local installation and each deployment resolve the latest stable Marmite release from crates.io using `scripts/latest_marmite.py` and install it with locked dependencies. Run the installation command above before building locally to stay current. The build job caches the binary by version and checks rendered pages, local links and assets before uploading the site. Shortcode rendering errors fail validation. A separate deployment job publishes the validated artifact to the `github-pages` environment; only that job has publishing permissions.
+Requires Rust/Cargo and Python 3. The scripts install Marmite automatically when needed.
+
+Builds check rendered pages, local links and assets before deployment. Shortcode rendering errors fail validation.
+
+## Upgrade Marmite
+
+Upgrade to the latest stable release and validate:
+
+```sh
+python3 scripts/latest_marmite.py --update
+bash scripts/build_site.sh
+```
+
+Preview the site, then commit `.marmite-version` with any compatibility fixes.
