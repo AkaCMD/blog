@@ -34,19 +34,21 @@ marmite . --new "Page title" -p
 
 Keep existing filenames and streams to preserve URLs. Use site-relative image paths such as `media/example.png`.
 
-## 友链
+## Friend links
 
-导航中的「友链」指向 `links.html`。在 `marmite.yaml` 的 `extra.friend_links` 中维护名单，按配置顺序展示：
+The friend links menu entry points to `links.html`. Manage links in `extra.friend_links` in `marmite.yaml`; cards appear in the configured order:
 
 ```yaml
 extra:
   friend_links:
-    - name: 朋友的博客
+    - name: A friend's blog
       url: https://example.com/
-      description: 一句话介绍这个站点（可省略）
+      description: A short introduction (optional)
 ```
 
-将条目合并到已有的 `extra` 配置中，网址使用完整的 `https://` 或 `http://` 地址。没有友链时保留 `friend_links: []`。页面介绍和交换方式在 `content/pages/links.md` 中修改；`<!-- .friend_links -->` 会生成适配明暗主题和手机屏幕的友链卡片。修改后重新构建即可。
+Merge these entries into the existing `extra` configuration and use full `https://` or `http://` URLs. Keep `friend_links: []` when the list is empty.
+
+Edit the page introduction and link exchange details in `content/pages/links.md`. The `<!-- .friend_links -->` shortcode renders cards that support light and dark themes and mobile screens. Rebuild the site after making changes.
 
 ## Build and deploy
 
