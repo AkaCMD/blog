@@ -52,7 +52,7 @@
 <div class="content-banner-image" style="background-image: url({{content.banner_image}});"></div>
 {% endif %}
 
-<article class="h-entry">
+<article class="h-entry{% if content.slug == 'links' %} friend-links-page{% endif %}">
   <data class="p-name" value="{{ content.title }}"></data>
   <a class="u-url" href="{{url_for(path=content.slug ~ '.html')}}" style="display: none;"></a>
   {% if content.date %}

@@ -44,10 +44,13 @@ extra:
   friend_links:
     - name: A friend's blog
       url: https://example.com/
+      avatar: media/friend-links/example.png
       description: A short introduction (optional)
 ```
 
 Merge these entries into the existing `extra` configuration and use full `https://` or `http://` URLs. Keep `friend_links: []` when the list is empty.
+
+Keep entries in alphabetical order by site name, using pinyin for Chinese names. Both `avatar` and `description` are optional. Store avatars or site icons in `content/media/friend-links/` and reference them with site-relative paths as shown above; full image URLs also work. Cards without an avatar display the first character of the site name.
 
 The friend links page is defined in `content/pages/links.md`. The `<!-- .friend_links -->` shortcode renders cards that support light and dark themes and mobile screens. Rebuild the site after making changes.
 
