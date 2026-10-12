@@ -13,6 +13,12 @@ default_date_format: "%b %e, %Y"
 toc: false
 show_next_prev_links: true
 enable_related_content: false
+# 原生作者 RSS 汇总所有栏目；无需额外的构建后处理。
+default_author: trioduckk
+authors:
+  trioduckk:
+    name: 三重鸭
+    avatar: static/avatar-placeholder.png
 
 # 导航与文章流
 menu:
@@ -20,7 +26,7 @@ menu:
   - [时间线, archive.html]
   - [旧存档, old-posts.html]
   - [友链, links.html]
-  - [RSS, index.rss]
+  - [RSS, "#rss"]
   - [关于, about.html]
 streams:
   old-posts:
