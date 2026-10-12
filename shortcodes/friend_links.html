@@ -3,10 +3,10 @@
 <ul class="friend-links" aria-label="朋友们的站点">
   {% for friend in site.extra.friend_links %}
   <li>
-    <a class="friend-link" href="{{ friend.url | escape }}" rel="friend">
-      <span class="friend-link-name">{{ friend.name | escape }}</span>
+    <a class="friend-link" href="{{ friend.url | escape_html }}" rel="friend">
+      <span class="friend-link-name">{{ friend.name | escape_html }}</span>
       {% if friend.description %}
-      <span class="friend-link-description">{{ friend.description | escape }}</span>
+      <span class="friend-link-description">{{ friend.description | escape_html }}</span>
       {% endif %}
     </a>
   </li>

@@ -5,8 +5,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -14,28 +12,62 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install marmite
-        run: cargo install marmite --version 0.4.2 --locked
+      - name: Resolve latest stable Marmite
+        id: marmite-version
+        run: |
+          version="$(python3 scripts/latest_marmite.py)"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Marmite binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/marmite/bin/marmite
+          key: marmite-${{ runner.os }}-${{ runner.arch }}-ubuntu24-${{ steps.marmite-version.outputs.version }}-locked-v1
+
+      - name: Install and verify Marmite
+        shell: bash
+        env:
+          MARMITE_VERSION: ${{ steps.marmite-version.outputs.version }}
+        run: |
+          marmite_root="$HOME/.local/share/marmite"
+          if [[ ! -x "$marmite_root/bin/marmite" ]] || [[ "$("$marmite_root/bin/marmite" --version)" != "marmite $MARMITE_VERSION" ]]; then
+            rustup update stable --no-self-update
+            cargo +stable install marmite --version "$MARMITE_VERSION" --locked --force --root "$marmite_root"
+          fi
+          "$marmite_root/bin/marmite" --version
+          echo "$marmite_root/bin" >> "$GITHUB_PATH"
 
       - name: Build site
         run: marmite . site
 
-      - name: Check local links and assets
+      - name: Check rendered pages, links and assets
         run: python3 scripts/check_site.py site
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Deploy to GitHub Pages
         id: deployment

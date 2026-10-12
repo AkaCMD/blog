@@ -1,6 +1,6 @@
 # Memex
 
-A static blog built with Marmite 0.4.2: [Visit the blog](https://AkaCMD.github.io/blog/).
+A static blog built with Marmite: [Visit the blog](https://AkaCMD.github.io/blog/).
 
 ## Structure
 
@@ -19,7 +19,8 @@ Local agent skills in `.agents/skills/` are also ignored.
 ## Preview
 
 ```sh
-cargo install marmite --version 0.4.2 --locked
+rustup update stable --no-self-update
+cargo +stable install marmite --version "$(python3 scripts/latest_marmite.py)" --locked --force
 marmite . site --serve --watch --bind 127.0.0.1:8000 --url http://127.0.0.1:8000
 ```
 
@@ -57,4 +58,6 @@ marmite . site
 python3 scripts/check_site.py site
 ```
 
-Push changes, then manually run **GH Pages Deploy** in GitHub Actions. The workflow checks local links and assets before publishing.
+Push changes, then manually run **GH Pages Deploy** in GitHub Actions. Deployment remains manual; pushing a commit does not publish the site.
+
+Local installation and each deployment resolve the latest stable Marmite release from crates.io using `scripts/latest_marmite.py` and install it with locked dependencies. Run the installation command above before building locally to stay current. The build job caches the binary by version and checks rendered pages, local links and assets before uploading the site. Shortcode rendering errors fail validation. A separate deployment job publishes the validated artifact to the `github-pages` environment; only that job has publishing permissions.

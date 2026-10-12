@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""检查 Marmite 输出中的本地链接、源码链接、媒体和 favicon，无需第三方依赖。"""
+"""检查 Marmite 输出中的渲染错误、本地链接、源码链接、媒体和 favicon，无需第三方依赖。"""
 import argparse
 import json
 from html.parser import HTMLParser
@@ -11,8 +11,11 @@ class Links(HTMLParser):
     def __init__(self):
         super().__init__()
         self.urls = []
+        self.shortcode_error = False
 
     def handle_starttag(self, tag, attrs):
+        if "shortcode-error" in (dict(attrs).get("class") or "").split():
+            self.shortcode_error = True
         for key, value in attrs:
             if value and key in {"href", "src", "poster"}:
                 self.urls.append(value)
@@ -34,6 +37,8 @@ def main():
     for page in pages:
         links = Links()
         links.feed(page.read_text())
+        if links.shortcode_error:
+            errors.add(f"{page.name}: Shortcode 渲染失败")
         for raw in links.urls:
             if raw.startswith("#"):
                 continue
@@ -74,7 +79,7 @@ def main():
         for error in sorted(errors):
             print(error)
         raise SystemExit(f"检查失败：{len(errors)} 个问题")
-    print(f"检查通过：{len(pages)} 个 HTML 页面的本地链接、源码链接、媒体和 favicon。")
+    print(f"检查通过：{len(pages)} 个 HTML 页面的渲染、本地链接、源码链接、媒体和 favicon。")
 
 
 if __name__ == "__main__":
