@@ -1,0 +1,38 @@
+{# Link card for internal content or an external URL. Overrides Marmite's built-in card to support imageless links. #}
+{% shortcode card(slug, image="", title="", text="", content_type="", site="") %}
+{% if slug is starting_with("http://") or slug is starting_with("https://") %}
+  {% set card = {"image": "", "title": "Link", "text": "", "content_type": "Link", "url": slug, "target_blank": true} %}
+{% else %}
+  {% set data = get_data_by_slug(slug=slug, site=site) %}
+  {% set card = {"image": data.image, "title": data.title, "text": data.text, "content_type": data.content_type, "url": url_for(path=data.slug ~ ".html"), "target_blank": false} %}
+{% endif %}
+{% set card = {
+  ...card,
+  "image": image if image else card.image,
+  "title": title if title else card.title,
+  "text": text if text else card.text,
+  "content_type": content_type if content_type else card.content_type
+} %}
+{% set display_url = card.url | replace(from="https://", to="") | replace(from="http://", to="") %}
+<div class="card">
+  <a class="card-link" href="{{ card.url | escape_html }}"{% if card.target_blank %} target="_blank" rel="noopener noreferrer"{% endif %}>
+    {% if card.image %}
+    <span class="card-image">
+      <img src="{{ card.image | escape_html }}" alt="" loading="lazy" decoding="async">
+    </span>
+    {% endif %}
+    <span class="card-body">
+      {% if card.content_type %}
+      <span class="card-type">{{ card.content_type | escape_html }}</span>
+      {% endif %}
+      <span class="card-title">{{ card.title | escape_html }}</span>
+      {% if card.text %}
+      <span class="card-text">{{ card.text | escape_html }}</span>
+      {% endif %}
+      {% if card.target_blank and display_url %}
+      <span class="card-url">{{ display_url | escape_html }} <span class="card-arrow" aria-hidden="true">↗</span></span>
+      {% endif %}
+    </span>
+  </a>
+</div>
+{% endshortcode card %}
