@@ -5,7 +5,7 @@ slug: making-custom-tools
 tags:
   - 随笔
   - 开发
-description: 最近用 AI Agent 辅助，做了点工具给自己用。分享一下工具以及想法。
+description: 最近用 AI Agent 辅助，做了点工具给自己用。分享&说说想法。
 ---
 最近用 AI Agent 辅助，做了点工具给自己用，觉得有点价值可以分享出来。顺便说说自己对使用 AI 的看法。
 
