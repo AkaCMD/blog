@@ -3,7 +3,7 @@ name: Memex
 tagline: "当生活给我橙子"
 url: https://AkaCMD.github.io/blog
 language: ""
-footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+footer: <div class="footer-body"><a class="footer-home" href="https://akacmd.github.io/" title="回到主站" aria-label="回到主站"></a><div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div></div>
 
 # 内容与显示
 content_path: content

@@ -421,3 +421,52 @@ header > a:visited,
     outline: 2px solid var(--pico-primary);
     outline-offset: 2px;
 }
+
+/* 页脚回到主站的像素小鸭徽章 */
+.footer-content {
+    padding-bottom: 1.5rem;
+}
+
+.footer-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem 0.8rem;
+}
+
+.footer-home {
+    display: block;
+    flex: 0 0 auto;
+    width: 80px;
+    height: 28px;
+    border: 1px solid var(--pico-primary);
+    background: #fff url("favicon.ico") left 5px center / auto 30px no-repeat;
+    background-origin: border-box;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.footer-home:hover {
+    transform: translateY(-3px) scale(1.15);
+    box-shadow: 0 6px 14px rgb(0 0 0 / 18%);
+}
+
+.footer-home:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: none;
+}
+
+.footer-home:focus-visible {
+    outline: 2px solid var(--pico-primary);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-home {
+        transition: none;
+    }
+
+    .footer-home:hover {
+        transform: none;
+    }
+}
