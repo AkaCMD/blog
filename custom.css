@@ -158,6 +158,39 @@ header > a:visited,
     color: var(--pico-muted-color);
 }
 
+/* Homepage link card to the old posts archive. */
+.content-list-more {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.content-list-more article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.content-list-more .content-title {
+    margin: 0;
+    color: var(--pico-primary);
+}
+
+.content-list-more-arrow {
+    flex: 0 0 auto;
+    color: var(--pico-primary);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.content-list-more:hover .content-title,
+.content-list-more:focus-visible .content-title,
+.content-list-more:hover .content-list-more-arrow,
+.content-list-more:focus-visible .content-list-more-arrow {
+    color: var(--pico-primary-hover);
+}
+
 .rss-copy-status {
     position: fixed;
     top: 1rem;
