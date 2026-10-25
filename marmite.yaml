@@ -42,7 +42,7 @@ extra:
   # 友链按名称首字母排列（中文按拼音）；avatar 和 description 可省略。
   friend_links:
     - name: 北依树洞
-      url: https://hanahoshikawa092.netlify.app/zh
+      url: https://hanax092.xyz
     - name: "dyron503's"
       url: https://blog.dyron503.com/
       avatar: media/friend-links/dyron503.png
