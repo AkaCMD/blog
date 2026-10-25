@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "han-regular": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/SubsetOTF/CN/SourceHanSerifCN-Regular.otf",
+    "han-bold": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/SubsetOTF/CN/SourceHanSerifCN-Bold.otf",
+    "han-license": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/LICENSE.txt",
+    "libron": "https://github.com/nicoverbruggen/libron/releases/download/v0.32/Libron_Web.zip",
+    "libron-license": "https://raw.githubusercontent.com/nicoverbruggen/libron/v0.32/LICENSE"
+  },
+  "source_sha256": {
+    "han-regular": "3754ea669c530e2473354f8f6d9f79680a44d7e26ec7d00eeabee4a7e0753c5d",
+    "han-bold": "4ee555ae58b3d22f6a95c2c494f2c36b7cccfc1d2224635f6461a03756f0e3c1",
+    "han-license": "9ff5bb567e1b92c801fc1069e5fbf992ff8efccacb9db94e5959a5b3ba9bb903",
+    "libron": "d4d88acc673dc2c27e01cf0bb96eb7820f89172ac9f9e6abb02f8c942af6cd49",
+    "libron-license": "bc596e272be47691f70c090bca17a8b6e58bd021baada8be18510beceed6cfbd"
+  },
+  "han_family": "Memex Han Serif",
+  "han_character_count": 30549,
+  "han_subsets_per_weight": 30,
+  "han_common_subset_size": 1799
+}

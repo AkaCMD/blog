@@ -81,7 +81,7 @@ def main():
     custom_script = root / "static/custom.js"
     if not custom_script.is_file() or any(
         marker not in custom_script.read_text()
-        for marker in ("event.preventDefault()", "rss-copy-status")
+        for marker in ("navigator.clipboard.writeText(rssFeed.href)", "rss-copy-status")
     ):
         errors.add("RSS 按钮缺少复制订阅链接的点击处理")
     repository = config.get("source_repository")

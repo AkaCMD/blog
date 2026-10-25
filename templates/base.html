@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{language}}">
+<html lang="{% if language %}{{language}}{% else %}zh-CN{% endif %}" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="{{url_for(path='static/favicon.ico')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark" />
     <meta name="generator" content="Marmite" />
+    <script>
+        (() => {
+            let preference = 'light';
+            try { preference = localStorage.getItem('picoPreferredColorScheme') || 'light'; } catch {}
+            if (!['light', 'dark'].includes(preference)) preference = 'light';
+            window.siteThemePreference = preference;
+            document.documentElement.dataset.theme = preference;
+        })();
+    </script>
     {% block seo %}
     <meta property="og:title" content="{{ site.name }}">
     <meta property="og:description" content="{{ site.tagline }}">
@@ -28,6 +37,8 @@
     <title>{% if title %}{{title}} | {%endif%}{{ site.name }}</title>
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/pico.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/marmite.css')}}">
+    <link rel="preload" href="{{url_for(path='media/fonts/Libron-Regular.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{url_for(path='media/fonts/fonts.css')}}">
     {% if site.extra.colorscheme %}
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/colorschemes/' ~ site.extra.colorscheme ~ '.css')}}">
     {% endif %}
@@ -76,7 +87,9 @@
                         </hgroup>
                     </li>
                 </ul>
-                <button id="menu-toggle" class="hamburger">&#9776;</button>
+                <button type="button" id="menu-toggle" class="hamburger" aria-controls="header-menu" aria-expanded="false" aria-label="展开导航菜单">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
 
                 <ul class="header-menu" id="header-menu">
                     {% for item in menu %}
@@ -84,7 +97,7 @@
                       {% set url = item[1] %}
                     <li>
                         {% if current_page and current_page == url %}
-                        <button class="menu-item active selected">{{name | safe }}</button>
+                        <a class="menu-item active selected" href="{{url_for(path=url)}}" aria-current="page">{{name | safe }}</a>
                         {% else %}
                         <a class="menu-item secondary" {% if url is starting_with(pat="http") %} href="{{url}}" target="_blank" {% else %} href="{{url_for(path=url)}}"{% endif %}>{{ name | safe }}</a>
                         {% endif %}
@@ -98,13 +111,14 @@
                             </svg>
                         </button>
                         {% if site.extra.colormodetoggle %}
-                        <button type="button" class="header-icon-button theme-toggle secondary" title="dark mode" aria-label="Toggle color theme">&#9789;</button>
+                        <button type="button" class="header-icon-button theme-toggle secondary" title="dark mode" aria-label="dark mode">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path></svg>
+                        </button>
                         {% endif %}
                     </li>
                     {% if site.enable_search %}
                     <li><a href="#" id="search-toggle" class="secondary" title="Search (Ctrl + Shift + F)"> <span class="search-txt">Search</span><span class="search-magnifier"></span></a></li>
                     {% endif %}
-                    <div class="underline"></div>
                 </ul>
             </nav>
             {% if site.enable_search %}
@@ -126,36 +140,15 @@
         {% if footer is defined %}
            {{ footer}}
         {% else %}
-        <footer class="footer-content grid">
+        <footer class="footer-content">
             {{ site.footer | safe }}
-            {% if site.extra.colorscheme_toggle %}
-            <div class="colorscheme-toggle-div">
-                colorscheme: <select name="colorscheme" class="colorscheme-toggle"><option value="default">default</option></select>
-                <span class="theme-toggle secondary" title="dark mode">&#9789;</span>
-            </div>
-            {% endif %}
         </footer>
         {% endif %}
     </main>
     {%- block tail %}
-    <script src="{{url_for(path='static/marmite.js')}}"></script>
     <script src="{{url_for(path='static/custom.js')}}"></script>
     {% if site.enable_search %}
     <script type="module" src="{{url_for(path='static/search.js')}}"></script>
-    {% endif %}
-    {% if site.extra.colorscheme_toggle %}    
-    <script type="application/javascript" >
-        colorschemeSwitcher();
-    </script>
-    {% endif %}
-    {% if site.extra.colormode %}
-        <script type="application/javascript">
-            // If there is already a scheme saved in localstorage, load that, else load config
-            if (themeSwitcher.scheme == "auto") {
-                themeSwitcher.scheme = "{{ site.extra.colormode }}";
-                themeSwitcher.updateIcon();
-            }
-        </script>
     {% endif %}
     {% endblock -%}
     {% if htmltail is defined %}

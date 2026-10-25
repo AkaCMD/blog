@@ -76,15 +76,14 @@
         </div>
         <p class="content-excerpt p-summary">
             {% if content.description %}
-            {{ content.description | replace(from='"', to="") | truncate(length=250, end=" ...") }}
+            {{ content.description | replace(from='"', to="") | truncate(length=140, end="…") }}
             {% else %}
-            {{ content.html | striptags | trim_start_matches(pat=content.title) | truncate(length=250, end=" ...") }}
+            {{ content.html | split(pat="</p>") | first | striptags | trim | trim_start_matches(pat=content.title) | trim | truncate(length=140, end="…") }}
             {%- endif %}
-            <a class="secondary" href="{{url_for(path=content.slug ~ '.html')}}">read more &rarr;</a>
         </p>
         {% if content.date -%}
         <footer class="data-tags-footer">
-            <span class="content-date"><a class="secondary" href="{{url_for(path=content.slug ~ '.html')}}">{{ content.date | default_date_format }}</a></span>
+            <time class="content-date" datetime="{{ content.date | date(format='%+') }}">{{ content.date | default_date_format }}</time>
             {% if content.tags -%}
             <ul class="content-tags overflow-auto">
                 {% for tag in content.tags[:3] -%}
@@ -107,12 +106,8 @@
     {%- endfor %}
     {% if current_page == "index.html" %}
     <a class="content-list-more" href="{{url_for(path='old-posts.html')}}">
-        <article class="content-list-item">
-            <div class="content-title-wrapper">
-                <h2 class="content-title">之前的文章</h2>
-            </div>
-            <span class="content-list-more-arrow" aria-hidden="true">→</span>
-        </article>
+        <span>之前的文章</span>
+        <span class="content-list-more-arrow" aria-hidden="true">→</span>
     </a>
     {% endif %}
     {% if total_pages is defined and total_pages > 1 %}
