@@ -27,7 +27,7 @@ Open [localhost](http://127.0.0.1:8000/).
 
 ## Fonts
 
-The site serves Libron and Source Han Serif locally from `content/media/fonts/`, including their licenses and source URLs in `sources.json`. Source Han Serif uses character subsets named Memex Han Serif. The subsets cover the source font's characters outside Libron's coverage, so new posts do not require rebuilding fonts. The Memex wordmark retains Atkinson Hyperlegible Next.
+The site serves Libron and Source Han Serif locally from `content/media/fonts/`, including their licenses and source URLs in `sources.json`. Source Han Serif uses character subsets named Memex Han Serif. The subsets cover the source font's characters outside Libron's coverage, so new posts do not require rebuilding fonts. The Memex wordmark also uses Libron.
 
 Normal site builds copy the prepared font assets. To regenerate them, install `fonttools` and `brotli` in a Python environment, then run `python3 scripts/prepare_fonts.py`. The script downloads pinned font sources; it requires network access.
 

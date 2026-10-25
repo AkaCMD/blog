@@ -23,9 +23,11 @@
 
 ## 3. 中文排版
 
-- [x] 西文使用 Libron，中文使用思源宋体分包，并设置 Linux、macOS、Windows 的系统宋体回退；站名保留原字形。
+- [x] 西文与 Memex 站名使用 Libron，中文使用思源宋体分包，并设置 Linux、macOS、Windows 的系统宋体回退。
 - [x] 阅读页正文采用桌面 18px、手机 17px，分别使用 1.9 和 1.85 行高，统一标题层级与辅助文字。
 - [x] 使用固定的阅读宽度上限，核对段落、图片与图注间距，以及 320px、390px、760px 和桌面布局。
+- [x] 将文章链接卡片的说明文字设为 14px，网址与类型标签设为 12px，调整文字间距并检查长网址换行。
+- [x] 手机端正文采用单层 12px 水平留白，同步处理文章页脚间距；320px 视口扣除滚动条后，正文可用宽度为 281px。
 
 对应文件：[custom.css](custom.css)、[templates/base.html](templates/base.html)、[字体资源](content/media/fonts/)、[字体准备脚本](scripts/prepare_fonts.py)。字体来源与重新生成方式见 [README 的 Fonts 部分](README.md#fonts)。
 
@@ -42,7 +44,10 @@
 - [x] 统一导航当前项、悬停和键盘焦点的视觉反馈，补齐移动菜单的焦点、展开状态与 Escape 关闭。
 - [x] 按用户最新要求保留现有界面语言，不统一翻译。
 - [x] 将页脚像素鸭的悬停改为上移 1px，并统一处理减少动态效果偏好。
+- [x] 正文段落与列表中的行内链接常驻 1px 细下划线，保留悬停与键盘焦点反馈；首页标题、导航、链接卡片、友链卡片、图片链接与标题锚点保持原有样式。
 
 对应文件：[custom.css](custom.css)、[custom.js](custom.js)、[templates/base.html](templates/base.html)、[templates/content.html](templates/content.html)。
 
 本地验收：`bash scripts/build_site.sh` 通过，检查 77 个页面与 RSS。使用 Chromium 核对阅读页、友链与归档的亮暗主题，以及 320px、390px、760px、1280px 布局；验证主题按钮单击切换、手选主题保存与首屏应用、存储不可用、键盘菜单与焦点、RSS 复制成功和失败恢复、减少动态效果。现有文章没有代码块和表格，这两类组件使用浏览器临时内容预览，未修改文章。截图位于 `preview/ui-details/`。
+
+可读性验收：首页、`making-custom-tools.html` 与 `ootss-notes.html` 的亮暗主题和四种宽度共 24 种组合均无横向溢出，字体与图片加载正常。正文保持手机 17px / 1.85、桌面 18px / 1.9，1280px 视口下正文宽度为 704px。浏览器检查链接的常态、悬停和键盘焦点，以及主题单击切换与刷新后保存；嵌套列表链接和当前为空的友链卡片使用临时样例检查，未修改生产内容。截图与实际样式记录位于 [preview/readability/](preview/readability/)。
