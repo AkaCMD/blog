@@ -13,7 +13,6 @@ A static blog built with Marmite: [Visit the blog](https://AkaCMD.github.io/blog
 - `marmite.yaml`: site configuration
 - `custom.css` and `favicon.ico`: site assets
 - `site/`: generated output, ignored by Git
-- [UI TODO](TODO.md): visual improvements and completion checklist
 
 Local agent skills in `.agents/skills/` are also ignored.
 
