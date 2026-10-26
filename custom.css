@@ -154,6 +154,14 @@ body {
     color: var(--site-brand);
 }
 
+.header-name a.contrast:is(:hover, :focus-visible) {
+    text-decoration: none;
+}
+
+.header-name a:is(:hover, :focus-visible) .site-name-label {
+    background-image: var(--link-wave-hover);
+}
+
 .header-menu .menu-item,
 .header-menu .menu-item.secondary,
 .header-menu .selected {
@@ -792,8 +800,9 @@ html[data-theme] .content-html pre.marmite-code {
 }
 
 /* A 10px SVG repeat keeps the wave spacious without thickening its 1px stroke. */
-a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, [role=button], :has(img))),
+a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, .header-name a, [role=button], :has(img))),
 .card-title,
+.site-name-label,
 .menu-label {
     background-size: 10px 3px;
     background-repeat: repeat-x;
@@ -802,7 +811,7 @@ a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, [role=button
     box-decoration-break: clone;
 }
 
-a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, .menu-item, [role=button], :has(img))):is(:hover, :focus-visible) {
+a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, .header-name a, .menu-item, [role=button], :has(img))):is(:hover, :focus-visible) {
     text-decoration: none;
     background-image: var(--link-wave-hover);
 }
@@ -815,6 +824,7 @@ a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, .menu-item, 
     .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))),
     .footer-credits a,
     a[href]:hover,
+    .header-name a:is(:hover, :focus-visible) .site-name-label,
     .header-menu .menu-item[aria-current=page] .menu-label {
         text-decoration: underline;
     }

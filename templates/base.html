@@ -79,7 +79,7 @@
                                     {% if site.logo_image %}
                                         <img src="{{url_for(path=site.logo_image)}}" alt="{{ site.name }}" class="u-photo">
                                     {% else %}
-                                        {{ site.name }}
+                                        <span class="site-name-label">{{ site.name }}</span>
                                     {% endif %}
                                 </a>
                             </h2>
