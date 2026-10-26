@@ -36,9 +36,9 @@ body {
 
 /* Keep prose links recognizable in both themes, including inside lists. */
 .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))) {
-    text-decoration: underline;
+    text-decoration: underline wavy;
     text-decoration-thickness: 1px;
-    text-underline-offset: 0.18em;
+    text-underline-offset: 0.1em;
 }
 
 .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))):is(:hover, :focus-visible) {
@@ -442,7 +442,7 @@ pre:has(> code.language-mermaid) {
 
 .content-html .card-link:hover .card-title,
 .content-html .card-link:focus-visible .card-title {
-    text-decoration: underline;
+    text-decoration: underline wavy;
 }
 
 .content-html .card-text {
@@ -631,7 +631,7 @@ pre:has(> code.language-mermaid) {
     color: inherit;
     text-decoration: underline;
     text-decoration-color: var(--site-border);
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.1em;
 }
 
 .footer-credits a:hover {
@@ -719,14 +719,14 @@ html[data-theme] .content-html pre.marmite-code {
     min-height: 2.75rem;
     padding-block: 0.4rem;
     text-decoration: none;
-    text-underline-offset: 0.4em;
+    text-underline-offset: 0.1em;
     transition: none;
 }
 
 .header-menu .menu-item[aria-current=page],
 .header-menu .menu-item:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration: underline wavy;
+    text-decoration-thickness: 1px;
 }
 
 .header-menu .menu-item[aria-current=page] {
@@ -784,6 +784,13 @@ html[data-theme] .content-html pre.marmite-code {
         padding-inline: 0.5rem;
     }
 
+}
+
+/* Share the wave across text links while retaining each component's visibility rules. */
+a[href] {
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.1em;
 }
 
 @media (prefers-reduced-motion: reduce) {
