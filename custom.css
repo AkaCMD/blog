@@ -9,6 +9,9 @@
     --site-muted: #666E70;
     --site-link: #24756F;
     --site-link-hover: #195B56;
+    --link-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%2324756F' stroke-width='1'/%3E%3C/svg%3E");
+    --link-wave-muted: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%23DEDEDE' stroke-width='1'/%3E%3C/svg%3E");
+    --link-wave-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%23195B56' stroke-width='1'/%3E%3C/svg%3E");
     --site-brand: #DB3A34;
     --site-border: #DEDEDE;
     --site-code-background: #F2F2F2;
@@ -36,9 +39,8 @@ body {
 
 /* Keep prose links recognizable in both themes, including inside lists. */
 .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))) {
-    text-decoration: underline wavy;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.1em;
+    text-decoration: none;
+    background-image: var(--link-wave);
 }
 
 .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))):is(:hover, :focus-visible) {
@@ -94,6 +96,9 @@ body {
     --site-muted: #B8B0A8;
     --site-link: #9FD3CF;
     --site-link-hover: #B9E1DE;
+    --link-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%239FD3CF' stroke-width='1'/%3E%3C/svg%3E");
+    --link-wave-muted: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%23484848' stroke-width='1'/%3E%3C/svg%3E");
+    --link-wave-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Cpath d='M0 1.5 Q2.5 -.5 5 1.5 T10 1.5' fill='none' stroke='%23B9E1DE' stroke-width='1'/%3E%3C/svg%3E");
     --site-brand: #F07870;
     --site-border: #484848;
     --site-code-background: #1D1D1D;
@@ -434,6 +439,7 @@ pre:has(> code.language-mermaid) {
 }
 
 .content-html .card-title {
+    width: fit-content;
     color: var(--site-text);
     font-size: 1rem;
     font-weight: 700;
@@ -442,7 +448,8 @@ pre:has(> code.language-mermaid) {
 
 .content-html .card-link:hover .card-title,
 .content-html .card-link:focus-visible .card-title {
-    text-decoration: underline wavy;
+    text-decoration: none;
+    background-image: var(--link-wave);
 }
 
 .content-html .card-text {
@@ -629,14 +636,13 @@ pre:has(> code.language-mermaid) {
 
 .footer-credits a {
     color: inherit;
-    text-decoration: underline;
-    text-decoration-color: var(--site-border);
-    text-underline-offset: 0.1em;
+    text-decoration: none;
+    background-image: var(--link-wave-muted);
 }
 
 .footer-credits a:hover {
     color: var(--site-link-hover);
-    text-decoration-color: currentColor;
+    background-image: var(--link-wave-hover);
 }
 
 @media (max-width: 600px) {
@@ -725,8 +731,7 @@ html[data-theme] .content-html pre.marmite-code {
 
 .header-menu .menu-item[aria-current=page],
 .header-menu .menu-item:hover {
-    text-decoration: underline wavy;
-    text-decoration-thickness: 1px;
+    text-decoration: none;
 }
 
 .header-menu .menu-item[aria-current=page] {
@@ -786,11 +791,33 @@ html[data-theme] .content-html pre.marmite-code {
 
 }
 
-/* Share the wave across text links while retaining each component's visibility rules. */
-a[href] {
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.1em;
+/* A 10px SVG repeat keeps the wave spacious without thickening its 1px stroke. */
+a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, [role=button], :has(img))),
+.card-title,
+.menu-label {
+    background-size: 10px 3px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+a[href]:not(:where(.card-link, .friend-link, .anchor, .footer-home, .menu-item, [role=button], :has(img))):is(:hover, :focus-visible) {
+    text-decoration: none;
+    background-image: var(--link-wave-hover);
+}
+
+.header-menu .menu-item:is([aria-current=page], :hover, :focus-visible) .menu-label {
+    background-image: var(--link-wave);
+}
+
+@media (forced-colors: active) {
+    .content-html :where(p, li) a:not(:where(.card-link, .friend-link, .anchor, [role=button], :has(img))),
+    .footer-credits a,
+    a[href]:hover,
+    .header-menu .menu-item[aria-current=page] .menu-label {
+        text-decoration: underline;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

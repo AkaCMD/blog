@@ -97,9 +97,9 @@
                       {% set url = item[1] %}
                     <li>
                         {% if current_page and current_page == url %}
-                        <a class="menu-item active selected" href="{{url_for(path=url)}}" aria-current="page">{{name | safe }}</a>
+                        <a class="menu-item active selected" href="{{url_for(path=url)}}" aria-current="page"><span class="menu-label">{{name | safe }}</span></a>
                         {% else %}
-                        <a class="menu-item secondary" {% if url is starting_with(pat="http") %} href="{{url}}" target="_blank" {% else %} href="{{url_for(path=url)}}"{% endif %}>{{ name | safe }}</a>
+                        <a class="menu-item secondary" {% if url is starting_with(pat="http") %} href="{{url}}" target="_blank" {% else %} href="{{url_for(path=url)}}"{% endif %}><span class="menu-label">{{ name | safe }}</span></a>
                         {% endif %}
                     </li>
                     {% endfor %}
