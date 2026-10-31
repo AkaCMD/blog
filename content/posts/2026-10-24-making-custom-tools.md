@@ -27,7 +27,7 @@ description: 最近用 AI Agent 辅助，做了点工具给自己用。分享&�
 
 
 ## Steam 浅色主题
-<!-- .card slug=https://github.com/AkaCMD/rose-pine-dawn-millennium title="Steam 浅色主题" text="一个给 Steam 桌面客户端用的浅色主题，Rosé Pine Dawn 配色。" content_type="GitHub" -->
+<!-- .card slug=https://github.com/AkaCMD/rose-pine-dawn-steam-store-theme title="Steam 浅色主题" text="一个给 Steam 桌面客户端用的浅色主题，Rosé Pine Dawn 配色。" content_type="GitHub" -->
 
 ![Steam 客户端浅色主题库界面](media/making-custom-tools/steam-theme-1.png "Steam 库界面应用主题后的效果")
 
