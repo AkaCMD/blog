@@ -73,6 +73,74 @@ body {
     font-size: 1.125em;
 }
 
+.post-toc {
+    --pico-nav-element-spacing-horizontal: 0;
+    --pico-nav-element-spacing-vertical: 0;
+    --pico-nav-link-spacing-horizontal: 0;
+    --pico-nav-link-spacing-vertical: 0;
+    border-inline-start: 1px solid var(--site-border);
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.45;
+}
+
+.post-toc[hidden] {
+    display: none;
+}
+
+.post-toc summary {
+    font-weight: 700;
+}
+
+.post-toc nav {
+    display: block;
+    max-block-size: 55dvh;
+    overflow: auto;
+    padding: 0.125rem;
+    overflow-wrap: anywhere;
+}
+
+.post-toc :is(ul, li) {
+    display: block;
+}
+
+.post-toc li {
+    margin-block: 0.35rem;
+}
+
+.post-toc li > ul {
+    border-inline-start: 1px solid var(--site-border);
+    padding-inline-start: 0.65rem;
+}
+
+.post-toc li a {
+    display: inline;
+}
+
+.article-body .content-html :is(h1, h2, h3, h4, h5, h6)[id] {
+    scroll-margin-block-start: 1.25rem;
+}
+
+@media (min-width: 76rem) {
+    .article-body:has(> .post-toc:not([hidden])) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 0;
+    }
+
+    .post-toc {
+        grid-area: 1 / 2;
+        align-self: start;
+        position: sticky;
+        inset-block-start: 1.25rem;
+        inline-size: 13rem;
+        margin-inline-start: 1.75rem;
+    }
+
+    .post-toc nav {
+        max-block-size: calc(100dvh - 4.5rem);
+    }
+}
+
 @media (max-width: 600px) {
     main.container {
         padding-inline: 0.75rem;

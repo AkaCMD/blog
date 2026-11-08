@@ -80,17 +80,15 @@
     </small></p>
   </div>
   {% endif %}
-  {% if content.toc %}
-  <div class="content-toc">
-    <a href="#" id="toc"></a>
-    <details>
-    <summary>🗒️</summary>
-    {{ content.toc }}
+  <div class="article-body">
+    {% if content.date and content.toc %}
+    <details class="post-toc" hidden>
+      <summary>目录</summary>
+      <nav aria-label="目录"></nav>
     </details>
+    {% endif %}
+    <div class="content-html e-content">{{ content.html }}</div>
   </div>
-  {% endif %}
-
-  <div class="content-html e-content">{{ content.html }}</div>
   {% if content.date %}
   <footer class="data-tags-footer">
 
